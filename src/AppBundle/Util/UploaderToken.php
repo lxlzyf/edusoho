@@ -66,7 +66,7 @@ class UploaderToken
 
     private function getKey()
     {
-        $this->getSettingService()->get('storage', array());
+        $storage = $this->getSettingService()->get('storage', array());
         $accessKey = empty($storage['cloud_access_key']) ? '' : $storage['cloud_access_key'];
         $secretKey = empty($storage['cloud_secret_key']) ? '' : $storage['cloud_secret_key'];
 
